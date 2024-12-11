@@ -8,6 +8,9 @@ const config = {
 	],
 	prefix: '',
 	theme: {
+		fontFamily: {
+			primary: "var(--font-jetbrainsMono",
+		},
 		extend: {
 			colors: {
 				background: 'var(--background)',
