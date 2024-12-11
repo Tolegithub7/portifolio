@@ -5,27 +5,6 @@
 @layer base {
   body {
     font-family: var(--font-jetbrainsMono);
-    background-color: var(--color-primary);
-    color: white;
-    line-height: 1.75;
+    @apply font-primary bg-primary text-white leading-loose;
   }
 }
-
-/* body {
-  font-family: Arial, Helvetica, sans-serif;
-} */
-
-/* @layer base {
-  body {
-    @apply font-primary bg-primary text-black leading-loose;
-  } */
-  /* :root {
-    --radius: 0.5rem;
-  } */
-/* } */
-
-/* @layer components {
-  .font-primary {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-} */
