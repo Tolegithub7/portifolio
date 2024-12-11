@@ -8,11 +8,16 @@ const config = {
 	],
 	prefix: '',
 	theme: {
-		fontFamily: {
-			primary: "var(--font-jetbrainsMono",
-		},
 		extend: {
+			fontFamily: {
+				primary: [ "var(--font-jetbrainsMono" ],
+			},
 			colors: {
+				primary: "1c1c22",
+				accent: {
+					DEFAULT: "#00ff99",
+					hover:"00e187",
+				},
 				background: 'var(--background)',
 				foreground: 'var(--foreground)'
 			},
