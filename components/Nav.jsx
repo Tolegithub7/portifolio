@@ -1,10 +1,9 @@
-import React from 'react'
 
 const Nav = () => {
   return (
-    <div>
-      
-    </div>
+    <nav>
+      Desktop Nav
+    </nav>
   )
 }
 

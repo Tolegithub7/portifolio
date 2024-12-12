@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Nav from "./Nav";
 import Button from "./ui/button";
 const Header = () => {
   return (
@@ -10,6 +11,7 @@ const Header = () => {
                     Tolosa <span className="text-accent">.</span>
                 </h1>
             </Link>
+            <Nav />
         </div>
       Header
     </header>
