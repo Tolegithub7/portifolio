@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Nav from "./Nav";
-import Button from "./ui/button";
+import { Button } from "./ui/button";
 const Header = () => {
   return (
     <header className="py-8 xl:py-12 text-white">
@@ -11,7 +11,12 @@ const Header = () => {
                     Tolosa <span className="text-accent">.</span>
                 </h1>
             </Link>
-            <Nav />
+            <div className="hidden xl:flex">
+              <Nav />
+              <Link href="/contact">
+                <Button>Hire Me</Button>
+              </Link>
+            </div>
         </div>
       Header
     </header>
