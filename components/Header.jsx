@@ -23,7 +23,6 @@ const Header = () => {
               <Nav />
             </div>
         </div>
-      Header
     </header>
   )
 }

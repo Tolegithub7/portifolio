@@ -33,13 +33,5 @@ export default function RootLayout({ children }) {
         </PageTransition>
       </body>
     </html>
-    // <html lang="en">
-    //   <body
-    //     className={`${jetbrainsMono.variable} bg-background text-dark dark:bg-dark dark:text-white`}
-    //   >
-    //     <Header />
-    //     <main className="container mx-auto px-4">{children}</main>
-    //   </body>
-    // </html>
   );
 }
