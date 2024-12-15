@@ -25,10 +25,16 @@ const links = [
 ]
 
 const MobileNav = () => {
+  const pathname = usePathname();
   return (
-    <nav>
-      Mb_Navigation
-    </nav>
+    <Sheet>
+      <SheetTrigger className="flex justify-center items-center">
+        <CiMenuFries className="text-[32px] text-accent" />
+      </SheetTrigger>
+      <SheetContent className="flex flex-col">
+        <div>Logo</div>
+      </SheetContent>
+    </Sheet>
   )
 }
 
