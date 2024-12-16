@@ -1,3 +1,4 @@
+import Social from '@/components/Social';
 import { Button } from '@/components/ui/button';
 import { FiDownload } from "react-icons/fi";
 const Home = () => {
@@ -9,10 +10,20 @@ const Home = () => {
             <span className='text-xl'>
               Software Developer
             </span>
-            <h1 className="h1">
-              Hello I'm <br /> <span>Tolosa Diriba</span>
+            <h1 className="h1 mb-6">
+              Hello I'm <br /> <span className='text-accent'>Tolosa Diriba</span>
             </h1>
-            <p>Transforming ideas into digital solutions through the power of code.</p>
+            <p className='max-w-[500px] mb-9 text-white/80'>Transforming ideas into digital solutions through the power of code.</p>
+            {/* button and socials */}
+            <div className='flex flex-col xl:flex-row items-center gap-8'>
+              <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
+                <span>Download CV</span>
+                <FiDownload className='text-xl'></FiDownload>
+              </Button>
+              <div className='mb-8 xl:mb-0'>
+                <Social />
+              </div>
+            </div>
           </div>
           <div>
             photo
