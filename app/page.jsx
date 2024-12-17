@@ -1,4 +1,5 @@
 import Social from '@/components/Social';
+import Photo from '@/components/Photo';
 import { Button } from '@/components/ui/button';
 import { FiDownload } from "react-icons/fi";
 const Home = () => {
@@ -26,7 +27,7 @@ const Home = () => {
             </div>
           </div>
           <div>
-            photo
+            <Photo />
           </div>
         </div>
       </div>
