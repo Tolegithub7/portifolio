@@ -1,6 +1,7 @@
 "use client";
 
-import { Description } from '@radix-ui/react-dialog';
+// import { Description } from '@radix-ui/react-dialog';
+import { RovingFocusGroup, RovingFocusGroupItem } from '@radix-ui/react-roving-focus';
 import { 
   FaHtml5, 
   FaCss3, 
@@ -14,7 +15,6 @@ import {
   SiAdobecreativecloud,
   SiTailwindcss,
   SiNextdotjs,
-  SiCapcut, // CapCut 
   SiDavinciresolve // DaVinci Resolve 
 } from 'react-icons/si';
 
@@ -118,20 +118,56 @@ const skills = {
       icon: <SiNextdotjs />,
       name: "next.js"
     }, {
-      icon: <SiCapcut />,
-      name: "capcut"
-    }, {
       icon: <SiDavinciresolve />,
       name: "davinci resolve"
     }
   ]
 }
+
+import { Tabs, TabsTrigger } from '@/components/ui/tabs';
+// import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+
+// import { ScrollArea } from '@/components/ui/scroll-area';
+import { motion } from 'framer-motion';
+
+// const Resume = () => {
+//   return (
+//     <motion.div 
+//       initial={{ opacity: 0 }} 
+//       animate={{ 
+//         opacity: 1, 
+//         transition: {delay: 2.4, duration: 0.4, ease: "easeIn"} }}
+//       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
+//       <div className="container mx-auto">
+//         <RovingFocusGroup>
+//           <Tabs>
+//             <TabsTrigger>Experience</TabsTrigger>
+//             <TabsTrigger>Education</TabsTrigger>
+//             <TabsTrigger>Skills</TabsTrigger>
+//             <TabsTrigger>About Me</TabsTrigger>
+//           </Tabs>
+//         </RovingFocusGroup>
+//       </div>
+//     </motion.div>
+//   )
+// }
 const Resume = () => {
   return (
     <div>
-      my Resume
+      <h1>{skills.title}</h1>
+      <p>{skills.Description}</p>
+      <RovingFocusGroup>
+        {skills.skillList.map((skill, index) => (
+          <RovingFocusGroupItem key={index}>
+            <div className="skill-item">
+              {skill.icon}
+              <span>{skill.name}</span>
+            </div>
+          </RovingFocusGroupItem>
+        ))}
+      </RovingFocusGroup>
     </div>
-  )
-}
+  );
+};
 
 export default Resume;
