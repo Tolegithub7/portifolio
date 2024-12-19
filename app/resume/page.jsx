@@ -130,44 +130,63 @@ import { Tabs, TabsTrigger } from '@/components/ui/tabs';
 // import { ScrollArea } from '@/components/ui/scroll-area';
 import { motion } from 'framer-motion';
 
-// const Resume = () => {
-//   return (
-//     <motion.div 
-//       initial={{ opacity: 0 }} 
-//       animate={{ 
-//         opacity: 1, 
-//         transition: {delay: 2.4, duration: 0.4, ease: "easeIn"} }}
-//       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
-//       <div className="container mx-auto">
-//         <RovingFocusGroup>
-//           <Tabs>
-//             <TabsTrigger>Experience</TabsTrigger>
-//             <TabsTrigger>Education</TabsTrigger>
-//             <TabsTrigger>Skills</TabsTrigger>
-//             <TabsTrigger>About Me</TabsTrigger>
-//           </Tabs>
-//         </RovingFocusGroup>
-//       </div>
-//     </motion.div>
-//   )
-// }
 const Resume = () => {
   return (
-    <div>
-      <h1>{skills.title}</h1>
-      <p>{skills.Description}</p>
-      <RovingFocusGroup>
-        {skills.skillList.map((skill, index) => (
-          <RovingFocusGroupItem key={index}>
-            <div className="skill-item">
-              {skill.icon}
-              <span>{skill.name}</span>
-            </div>
-          </RovingFocusGroupItem>
-        ))}
-      </RovingFocusGroup>
-    </div>
-  );
-};
+    <motion.div 
+      initial={{ opacity: 0 }} 
+      animate={{ 
+        opacity: 1, 
+        transition: {delay: 2.4, duration: 0.4, ease: "easeIn"} }}
+      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
+      <div className="container mx-auto">
+        <Tabs defaultValue='experience ' className='flex flex-col xl:flex-row gap-[60px]'>
+          <TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6'>
+            <TabsTrigger  value="experiece">Experience</TabsTrigger>
+            <TabsTrigger  value="education">Education</TabsTrigger>
+            <TabsTrigger  value="skills">Skills</TabsTrigger>
+            <TabsTrigger  value="about">About Me</TabsTrigger>
+          </TabsList>
+          {/* content  */}
+          <div className='min-h-[70vh] w-full'>
+            {/* experience  */}
+            <TabsContent value="experience" className='w-full'>
+              Experience
+            </TabsContent>
+            {/* Education  */}
+            <TabsContent value="education" className='w-full'>
+              Education
+            </TabsContent>
+            {/* Skills  */}
+            <TabsContent value="skills" className='w-full'>
+              Skills
+            </TabsContent>
+            {/* about  */}
+            <TabsContent value="about" className='w-full'>
+              About
+            </TabsContent>
+          </div>
+        </Tabs>
+      </div>
+    </motion.div>
+  )
+}
+// const Resume = () => {
+//   return (
+//     <div>
+//       <h1>{skills.title}</h1>
+//       <p>{skills.Description}</p>
+//       <RovingFocusGroup>
+//         {skills.skillList.map((skill, index) => (
+//           <RovingFocusGroupItem key={index}>
+//             <div className="skill-item">
+//               {skill.icon}
+//               <span>{skill.name}</span>
+//             </div>
+//           </RovingFocusGroupItem>
+//         ))}
+//       </RovingFocusGroup>
+//     </div>
+//   );
+// };
 
 export default Resume;
